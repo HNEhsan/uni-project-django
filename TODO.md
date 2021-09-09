@@ -1,5 +1,5 @@
-#To do
+#Todo
 
 
 - [ ] Connect all app together
-- [x] migrate db
+- [] migrate db
