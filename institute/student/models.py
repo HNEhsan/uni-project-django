@@ -1,6 +1,5 @@
 from django.db import models
 from secretary.models import Term
-from teacher.models import StudentScore
 # Create your models here.
 
 
@@ -17,7 +16,6 @@ class StudentRegister(models.Model):
 class PaymentOfTuition(models.Model):
     TransactionId = models.CharField(max_length=100, primary_key=True)
     NationalCode = models.ForeignKey(StudentRegister, on_delete=models.CASCADE)
-    #TermId
     TermId = models.ForeignKey(Term, on_delete=models.CASCADE)
     Price = models.CharField(max_length=10)
     Date = models.DateTimeField('Deposit Date')
@@ -28,7 +26,3 @@ class EducationBackground(models.Model):
     StudentId = models.IntegerField()
     Nationalcode = models.ForeignKey(StudentRegister, on_delete=models.CASCADE)
     TransactionId = models.ForeignKey(PaymentOfTuition, on_delete=models.CASCADE) 
-    #ScoreId
-    ScoreId = models.ForeignKey(StudentScore, on_delete=models.CASCADE)
-
-

@@ -1,6 +1,6 @@
 from django.db import models
 from secretary.models import Term, Lesson
-#from student.models import EducationBackground
+from student.models import EducationBackground
 # Create your models here.
 
 
@@ -45,7 +45,7 @@ class StudentScore(models.Model):
     ScoreId = models.CharField(max_length=20, primary_key=True)
     TeacheId = models.ForeignKey(TeacherInfo, on_delete=models.CASCADE)
     #StudentId
-    #StudentId = models.ForeignKey(EducationBackground, on_delete=models.CASCADE)
+    StudentId = models.ForeignKey(EducationBackground, on_delete=models.CASCADE)
     #LessonId
     LessonId = models.ForeignKey(Lesson, on_delete=models.CASCADE)
     Score = models.IntegerField(default=0)
