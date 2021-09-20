@@ -7,7 +7,7 @@
 - [x] create and migrate teacher app
 - [ ] create urls and views teacher app
 - [x] create and migrate secretary app
-- [ ] create urls and views secretary app
+- [x] create urls and views secretary app
 - [ ] migrate  all db
 - [ ] create urls and views main app
 - [ ] dockerise project
